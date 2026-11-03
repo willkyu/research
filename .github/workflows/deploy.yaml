@@ -1,4 +1,4 @@
-name: Publish Research
+name: Publish
 
 on:
   push:
