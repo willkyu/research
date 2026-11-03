@@ -12,3 +12,10 @@ replit.nix
 .quartz/
 quartz/cli/tui/dist/
 .turbo/
+
+/content/.obsidian/
+/content/.trash/
+/content/private/
+*.pdf
+*.PDF
+Thumbs.db
