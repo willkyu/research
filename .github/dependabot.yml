@@ -11,6 +11,9 @@ updates:
         patterns:
           - "@quartz-community/*"
           - "@quartz-themes/*"
+        update-types:
+          - "minor"
+          - "patch"
       # Isolated because a compiler major needs a tsconfig migration of its own.
       typescript:
         applies-to: "version-updates"
