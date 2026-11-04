@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "97244d08d364bccb",
+    "type": "split",
+    "children": [
+      {
+        "id": "8a80c3a3a5f71d4a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "23a069c00ea7405f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "papers/SensorLM Learning the Language of Wearable Sensors-GDWE58BQ.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SensorLM Learning the Language of Wearable Sensors-GDWE58BQ"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3918694548ee1277",
+    "type": "split",
+    "children": [
+      {
+        "id": "b52ebaa7baf971bd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a069590d3221994c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "e889e69806d31374",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "d1f96e517ec99e5a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "6190002bc04e575d",
+    "type": "split",
+    "children": [
+      {
+        "id": "ee2efde61a3c6cfb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d0672f71a55b5200",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "papers/SensorLM.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "00b6ddf2bc499afd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "papers/SensorLM.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "da95288b893d9d1c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "630943c52837441e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "88f30cf4ae721f1b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "papers/SensorLM.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "23a069c00ea7405f",
+  "lastOpenFiles": [
+    "templates/paper.md",
+    "papers/SensorLM Learning the Language of Wearable Sensors-GDWE58BQ.md",
+    "templates/concept.md",
+    "concepts/example-concept.md",
+    "papers/-4GNJSZC3.md",
+    "papers/SensorLM.md",
+    "papers/example-paper.md",
+    "papers 1/example-paper.md",
+    "papers 1",
+    "papers/未命名.md",
+    "index.md",
+    "assets",
+    "projects",
+    "topics",
+    "concepts",
+    "papers",
+    "templates"
+  ]
+}

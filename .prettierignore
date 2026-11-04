@@ -1,0 +1,5 @@
+public
+node_modules
+.quartz-cache
+# Notes are authored content, not source code.
+content

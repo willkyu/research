@@ -1,0 +1,199 @@
+{
+  "children": [
+    {
+      "accessDate": "2026-11-04T04:26:35Z",
+      "charset": "",
+      "contentType": "application/pdf",
+      "dateAdded": "2026-11-04T04:26:35Z",
+      "dateModified": "2026-11-04T04:26:35Z",
+      "filename": "Zhang 等 - 2025 - SensorLM Learning the Language of Wearable Sensors.pdf",
+      "itemType": "attachment",
+      "key": "3JZVV79J",
+      "linkMode": "imported_url",
+      "parentItem": "B8MHDLAM",
+      "relations": {},
+      "tags": [],
+      "title": "Full Text PDF",
+      "url": "https://arxiv.org/pdf/2506.09108"
+    },
+    {
+      "dateAdded": "2026-11-04T08:14:22Z",
+      "dateModified": "2026-11-04T09:12:26Z",
+      "itemType": "note",
+      "key": "P7XGL47Y",
+      "note": "<div data-schema-version=\"9\"><h1>SensorLM: Learning the Language of Wearable Sensors</h1>\n<h2>一句话概括</h2>\n<p>插件同步测试。 testing plugin local sync.</p>\n<p>112332</p>\n<h2>研究问题</h2>\n<p>作者研究什么，现有方法存在什么不足？</p>\n<h2>方法与主要贡献</h2>\n<h2>数据与实验</h2>\n<p>数据来源、评价指标、比较基线与关键条件。</p>\n<h2>关键结果与证据</h2>\n<p>记录对应页码、章节、图表或公式编号。</p>\n<h2>局限与适用范围</h2>\n<p>区分作者报告的局限与自己的判断。</p>\n<h2>与已有研究的关系</h2>\n<ul>\n<li>\n相关论文：\n</li>\n<li>\n相关概念：\n</li>\n<li>\n相关研究方向：\n</li>\n</ul>\n<h2>我的判断与待核实问题</h2>\n<h2>下一步</h2>\n<ul>\n<li>\n核对关键结论与原文\n</li>\n<li>\n核对文献元数据和来源链接\n</li>\n<li>\n补充论文与概念之间的双链\n</li>\n</ul>\n</div>",
+      "parentItem": "B8MHDLAM",
+      "relations": {},
+      "tags": []
+    }
+  ],
+  "meta": {
+    "attachments": [
+      {
+        "annotationCount": 0,
+        "contentType": "application/pdf",
+        "filename": "Zhang 等 - 2025 - SensorLM Learning the Language of Wearable Sensors.pdf",
+        "files": [],
+        "key": "3JZVV79J",
+        "linkMode": "imported_url",
+        "status": "not-synced",
+        "title": "Full Text PDF",
+        "url": "https://arxiv.org/pdf/2506.09108"
+      }
+    ],
+    "collections": [],
+    "creators": [
+      "Zhang, Yuwei",
+      "Ayush, Kumar",
+      "Qiao, Siyuan",
+      "Heydari, A. Ali",
+      "Narayanswamy, Girish",
+      "Xu, Maxwell A.",
+      "Metwally, Ahmed A.",
+      "Xu, Shawn",
+      "Garrison, Jake",
+      "Xu, Xuhai",
+      "Althoff, Tim",
+      "Liu, Yun",
+      "Kohli, Pushmeet",
+      "Zhan, Jiening",
+      "Malhotra, Mark",
+      "Patel, Shwetak",
+      "Mascolo, Cecilia",
+      "Liu, Xin",
+      "McDuff, Daniel",
+      "Yang, Yuzhe"
+    ],
+    "itemType": "webpage",
+    "libraryID": 1,
+    "libraryName": "我的文库",
+    "notes": [
+      {
+        "key": "P7XGL47Y",
+        "title": "SensorLM: Learning the Language of Wearable Sensors"
+      }
+    ],
+    "title": "SensorLM: Learning the Language of Wearable Sensors",
+    "year": "2025",
+    "zoteroURI": "zotero://select/library/items/B8MHDLAM"
+  },
+  "zotero": {
+    "abstractNote": "We present SensorLM, a family of sensor-language foundation models that enable wearable sensor data understanding with natural language. Despite its pervasive nature, aligning and interpreting sensor data with language remains challenging due to the lack of paired, richly annotated sensor-text descriptions in uncurated, real-world wearable data. We introduce a hierarchical caption generation pipeline designed to capture statistical, structural, and semantic information from sensor data. This approach enabled the curation of the largest sensor-language dataset to date, comprising over 59.7 million hours of data from more than 103,000 people. Furthermore, SensorLM extends prominent multimodal pretraining architectures (e.g., CLIP, CoCa) and recovers them as specific variants within a generic architecture. Extensive experiments on real-world tasks in human activity analysis and healthcare verify the superior performance of SensorLM over state-of-the-art in zero-shot recognition, few-shot learning, and cross-modal retrieval. SensorLM also demonstrates intriguing capabilities including scaling behaviors, label efficiency, sensor captioning, and zero-shot generalization to unseen tasks.",
+    "accessDate": "2026-11-04T04:26:32Z",
+    "collections": [],
+    "creators": [
+      {
+        "creatorType": "author",
+        "firstName": "Yuwei",
+        "lastName": "Zhang"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Kumar",
+        "lastName": "Ayush"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Siyuan",
+        "lastName": "Qiao"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "A. Ali",
+        "lastName": "Heydari"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Girish",
+        "lastName": "Narayanswamy"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Maxwell A.",
+        "lastName": "Xu"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Ahmed A.",
+        "lastName": "Metwally"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Shawn",
+        "lastName": "Xu"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Jake",
+        "lastName": "Garrison"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Xuhai",
+        "lastName": "Xu"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Tim",
+        "lastName": "Althoff"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Yun",
+        "lastName": "Liu"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Pushmeet",
+        "lastName": "Kohli"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Jiening",
+        "lastName": "Zhan"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Mark",
+        "lastName": "Malhotra"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Shwetak",
+        "lastName": "Patel"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Cecilia",
+        "lastName": "Mascolo"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Xin",
+        "lastName": "Liu"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Daniel",
+        "lastName": "McDuff"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Yuzhe",
+        "lastName": "Yang"
+      }
+    ],
+    "date": "2025/06/10",
+    "dateAdded": "2026-11-04T04:26:32Z",
+    "dateModified": "2026-11-04T04:26:32Z",
+    "itemType": "webpage",
+    "key": "B8MHDLAM",
+    "language": "en",
+    "relations": {},
+    "shortTitle": "SensorLM",
+    "tags": [],
+    "title": "SensorLM: Learning the Language of Wearable Sensors",
+    "url": "https://arxiv.org/abs/2506.09108v1",
+    "websiteTitle": "arXiv.org"
+  }
+}

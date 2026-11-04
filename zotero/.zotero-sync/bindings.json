@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "images": [],
+      "library": {
+        "type": "user"
+      },
+      "md5": "1db57fd5e5419eda71fc70b14e3c49f6",
+      "noteKey": "P7XGL47Y",
+      "noteMd5": "bababc6723b874173460cf95c60206c4",
+      "noteVersion": 0,
+      "parentKey": "B8MHDLAM",
+      "path": "content/papers/SensorLM Learning the Language of Wearable Sensors-GDWE58BQ.md",
+      "updated": "2026-11-04T09:41:30.491Z"
+    }
+  ],
+  "generator": "zotero-quartz-workspace-sync",
+  "schema": 1
+}
