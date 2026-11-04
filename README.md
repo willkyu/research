@@ -15,5 +15,4 @@
 - `zotero/`：Zotero 同步数据与状态
 - `quartz.config.yaml`：网站和插件配置
 
-
 本知识库通过 [Zotero Sync and Publish](https://github.com/willkyu/zotero-sync-and-publish-plugin) 插件管线自动同步笔记，并构建、发布到 GitHub Pages。
