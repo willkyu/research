@@ -35,7 +35,7 @@ order:: 20
 - `bind` 必填：`research`、`blog`、`pokemon`、`projects`。
 - `appearance` 必填：`text`、`gallery`、`book`、`browser`、`disc`。
 - `summary` 必填，必须是非空单行文本。
-- `order` 必填，必须是整数。输出按 `order`、最终 `href` 排序。
+- `order` 必填，必须是 JavaScript 安全整数（`-9007199254740991` 至 `9007199254740991`）。输出按 `order`、最终 `href` 排序。
 - `tags` 可选，以英文逗号或中文逗号分隔。
 - `enabled` 可选，默认 `true`；改为 `false` 可暂时移除条目。
 - `cover` 对 `gallery`、`book`、`browser`、`disc` 必填；`text` 可选。

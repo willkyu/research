@@ -112,6 +112,8 @@ function finalizeEntry(
   const summary = fields.get("summary")!.trim()
   const orderText = fields.get("order")!.trim()
   if (!/^-?\d+$/.test(orderText)) fail(context, "order must be an integer")
+  const order = Number(orderText)
+  if (!Number.isSafeInteger(order)) fail(context, "order must be a safe integer")
 
   const coverValue = fields.get("cover")?.trim()
   if (appearance !== "text" && !coverValue) {
@@ -129,7 +131,7 @@ function finalizeEntry(
     appearance,
     summary,
     tags,
-    order: Number(orderText),
+    order,
     enabled: fields.has("enabled")
       ? parseBoolean(fields.get("enabled")!.trim(), "enabled", context)
       : true,

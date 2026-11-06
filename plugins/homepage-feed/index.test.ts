@@ -1,6 +1,7 @@
 import assert from "node:assert/strict"
 import test from "node:test"
 import { buildFeed, parseManifest, type DocumentCandidate } from "./index"
+import { validateFeed } from "./validate"
 
 const documents: DocumentCandidate[] = [
   {
@@ -111,6 +112,22 @@ order:: 1
   )
 })
 
+test("rejects order values outside the safe integer range", () => {
+  assert.throws(
+    () =>
+      parseManifest(`---
+homepageManifest: 1
+---
+## [[项目/研究工具|研究工具]]
+bind:: projects
+appearance:: text
+summary:: 工具。
+order:: 9007199254740992
+`),
+    /order must be a safe integer/,
+  )
+})
+
 test("rejects ambiguous links and duplicate resolved hrefs", () => {
   const ambiguous = parseManifest(`---
 homepageManifest: 1
@@ -158,5 +175,59 @@ order:: 2
         "willkyu.github.io/research",
       ),
     /duplicate href/,
+  )
+})
+
+test("independently validates the emitted JSON protocol", () => {
+  const valid = {
+    schemaVersion: 1,
+    source: "research",
+    generatedAt: "2026-11-06T00:00:00.000Z",
+    items: [
+      {
+        bind: "research",
+        title: "甲",
+        summary: "甲摘要。",
+        href: "/research/a",
+        appearance: "text",
+        tags: [],
+        order: 1,
+      },
+      {
+        bind: "projects",
+        title: "乙",
+        summary: "乙摘要。",
+        href: "/research/b",
+        appearance: "gallery",
+        tags: ["项目"],
+        order: 2,
+        cover: "/research/assets/b.png",
+      },
+    ],
+  }
+  assert.doesNotThrow(() => validateFeed(valid))
+  assert.throws(
+    () => validateFeed({ ...valid, items: [{ ...valid.items[0], bind: "other" }] }),
+    /bind is invalid/,
+  )
+  assert.throws(
+    () => validateFeed({ ...valid, items: [{ ...valid.items[0], layout: "random" }] }),
+    /unknown field/,
+  )
+  assert.throws(
+    () => validateFeed({ ...valid, items: [valid.items[1], valid.items[0]] }),
+    /sorted by order and then href/,
+  )
+  assert.throws(
+    () => validateFeed({ ...valid, items: [valid.items[0], { ...valid.items[0], title: "重复" }] }),
+    /href is duplicated/,
+  )
+  assert.throws(
+    () =>
+      validateFeed({
+        ...valid,
+        items: [{ ...valid.items[1], cover: undefined }],
+      }),
+    /cover is required/,
   )
 })

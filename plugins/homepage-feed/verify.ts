@@ -1,18 +1,7 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 import { OUTPUT_FILE } from "./index"
-
-interface FeedItem {
-  href: string
-  cover?: string
-}
-
-interface Feed {
-  schemaVersion: number
-  source: string
-  generatedAt: string
-  items: FeedItem[]
-}
+import { validateFeed } from "./validate"
 
 const root = process.cwd()
 const output = path.join(root, "public")
@@ -45,11 +34,8 @@ async function requirePublicUrl(publicUrl: string): Promise<void> {
 
 async function main() {
   const feedPath = path.join(output, OUTPUT_FILE)
-  const feed = JSON.parse(await fs.readFile(feedPath, "utf8")) as Feed
-  if (feed.schemaVersion !== 1 || feed.source !== "research" || !Array.isArray(feed.items)) {
-    throw new Error(`${OUTPUT_FILE} does not match schema version 1`)
-  }
-  if (Number.isNaN(Date.parse(feed.generatedAt))) throw new Error("generatedAt is not ISO-8601")
+  const feed: unknown = JSON.parse(await fs.readFile(feedPath, "utf8"))
+  validateFeed(feed)
 
   const files = await fs.readdir(output, { recursive: true })
   const leakedPage = files.find((file) => file.replace(/\\/g, "/").includes("_homepage"))
