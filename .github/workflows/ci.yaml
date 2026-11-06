@@ -44,3 +44,6 @@ jobs:
 
       - name: Build website
         run: npx quartz build
+
+      - name: Verify homepage feed
+        run: npm run check:homepage-feed

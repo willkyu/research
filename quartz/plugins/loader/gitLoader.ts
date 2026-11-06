@@ -473,7 +473,19 @@ export async function installPlugin(
       console.log(styleText("cyan", `→`), `Linking ${spec.name} from ${spec.repo}...`)
     }
 
-    fs.symlinkSync(spec.repo, pluginDir, "dir")
+    try {
+      fs.symlinkSync(spec.repo, pluginDir, "dir")
+    } catch (error) {
+      const code = error instanceof Error && "code" in error ? error.code : undefined
+      if (code !== "EPERM" || process.platform !== "win32") throw error
+      try {
+        fs.symlinkSync(spec.repo, pluginDir, "junction")
+      } catch {
+        // Junctions normally work without Developer Mode. Keep a copy fallback
+        // for restricted Windows environments, matching the Quartz CLI helper.
+        fs.cpSync(spec.repo, pluginDir, { recursive: true })
+      }
+    }
 
     if (options.verbose) {
       console.log(styleText("green", `✓`), `Linked ${spec.name}`)

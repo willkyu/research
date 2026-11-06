@@ -12,7 +12,10 @@
 - `content/papers/`：论文笔记
 - `content/concepts/`：概念笔记
 - `content/templates/`：笔记模板
+- `content/_homepage.md`：个人主页精选内容清单（不生成 Quartz 页面）
 - `zotero/`：Zotero 同步数据与状态
 - `quartz.config.yaml`：网站和插件配置
+
+清单格式、链接解析和本地校验见 [主页精选内容清单](docs/HOMEPAGE-FEED.md)。正式构建会生成站点根目录的 `homepage-feed.json`。
 
 本知识库通过 [Zotero Sync and Publish](https://github.com/willkyu/zotero-sync-and-publish-plugin) 插件管线自动同步笔记，并构建、发布到 GitHub Pages。

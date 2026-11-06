@@ -39,6 +39,9 @@ jobs:
       - name: Build website
         run: npx quartz build
 
+      - name: Verify homepage feed
+        run: npm run check:homepage-feed
+
       - name: Upload website
         uses: actions/upload-pages-artifact@v5
         with:

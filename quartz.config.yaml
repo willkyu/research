@@ -12,6 +12,7 @@ configuration:
     - private
     - templates
     - .obsidian
+    - _homepage.md
     - "**/*.pdf"
     - "**/*.PDF"
   theme:
@@ -145,6 +146,9 @@ plugins:
     options:
       enableSiteMap: true
       enableRSS: true
+  - source: "./plugins/homepage-feed"
+    enabled: true
+    order: 55
   - source: "@quartz-community/favicon"
     enabled: true
   - source: "@quartz-community/og-image"
