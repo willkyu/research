@@ -1,0 +1,183 @@
+{
+  "children": [
+    {
+      "charset": "",
+      "contentType": "application/pdf",
+      "dateAdded": "2026-11-13T06:54:28Z",
+      "dateModified": "2026-11-13T06:54:28Z",
+      "filename": "Rastogi 等 - 2026 - TRACE-TS Attribution-Grounded and Traceable Sensor-Language Reasoning for Human Activity Understand.pdf",
+      "itemType": "attachment",
+      "key": "H8HQLVL5",
+      "lastRead": 1794559249,
+      "linkMode": "imported_file",
+      "parentItem": "EPQWN555",
+      "relations": {},
+      "tags": [],
+      "title": "PDF"
+    },
+    {
+      "dateAdded": "2026-11-13T08:56:41Z",
+      "dateModified": "2026-11-13T10:48:11Z",
+      "itemType": "note",
+      "key": "NY8UY9DX",
+      "note": "<div data-schema-version=\"9\"></div>",
+      "parentItem": "EPQWN555",
+      "relations": {},
+      "tags": []
+    },
+    {
+      "accessDate": "2026-11-12T01:44:07Z",
+      "charset": "utf-8",
+      "contentType": "text/html",
+      "dateAdded": "2026-11-12T01:44:07Z",
+      "dateModified": "2026-11-12T01:44:07Z",
+      "filename": "2608.html",
+      "itemType": "attachment",
+      "key": "X32P9VA7",
+      "lastRead": 1794447889,
+      "linkMode": "imported_url",
+      "parentItem": "EPQWN555",
+      "relations": {},
+      "tags": [],
+      "title": "Snapshot",
+      "url": "http://arxiv.org/abs/2608.00200"
+    },
+    {
+      "annotationAuthorName": "",
+      "annotationColor": "#ffd400",
+      "annotationComment": "",
+      "annotationPageLabel": "1",
+      "annotationPosition": "{\"pageIndex\":0,\"rects\":[[184.89,170.082,295.556,179.049],[53.798,159.123,294.046,168.09],[53.798,148.164,195.2,157.131]]}",
+      "annotationSortIndex": "00000|002163|00612",
+      "annotationText": "However, most wearable timeseries (TS) models remain optimized for label prediction, mapping each window to a fixed activity class.",
+      "annotationType": "highlight",
+      "dateAdded": "2026-11-13T06:54:55Z",
+      "dateModified": "2026-11-13T06:54:55Z",
+      "itemType": "annotation",
+      "key": "YKRA6CMQ",
+      "parentItem": "H8HQLVL5",
+      "relations": {},
+      "tags": []
+    }
+  ],
+  "meta": {
+    "attachments": [
+      {
+        "annotationCount": 1,
+        "contentType": "application/pdf",
+        "filename": "Rastogi 等 - 2026 - TRACE-TS Attribution-Grounded and Traceable Sensor-Language Reasoning for Human Activity Understand.pdf",
+        "files": [],
+        "key": "H8HQLVL5",
+        "linkMode": "imported_file",
+        "status": "not-synced",
+        "title": "PDF",
+        "url": null
+      },
+      {
+        "annotationCount": 0,
+        "contentType": "text/html",
+        "filename": "2608.html",
+        "files": [],
+        "key": "X32P9VA7",
+        "linkMode": "imported_url",
+        "status": "not-synced",
+        "title": "Snapshot",
+        "url": "http://arxiv.org/abs/2608.00200"
+      }
+    ],
+    "collections": [
+      "wearable sensors"
+    ],
+    "creators": [
+      "Rastogi, Sparsh",
+      "Kumar, Tanmay",
+      "Chen, Baiyu",
+      "Bedi, Jatin",
+      "Li, Zechen",
+      "Salim, Flora D."
+    ],
+    "itemType": "preprint",
+    "libraryID": 1,
+    "libraryName": "我的文库",
+    "notes": [
+      {
+        "key": "NY8UY9DX",
+        "title": "Note"
+      }
+    ],
+    "title": "TRACE-TS: Attribution-Grounded and Traceable Sensor-Language Reasoning for Human Activity Understanding",
+    "year": "2026",
+    "zoteroURI": "zotero://select/library/items/EPQWN555"
+  },
+  "zotero": {
+    "DOI": "10.48550/arXiv.2608.00200",
+    "abstractNote": "Wearable sensors capture fine-grained motion patterns that support rich behavioral understanding, yet most existing methods reduce these signals to activity labels. Recent LM-based approaches generate natural-language explanations for sensor data, but their reasoning is weakly grounded in the underlying signal, leading to fluent yet unverifiable explanations. We introduce TRACE-TS (Traceable Reasoning with Attribution-Grounded Evidence), a framework for structured and signal-grounded reasoning over wearable time series. TRACE-TS uses attribution from an expert classifier to identify salient spatio-temporal sensor regions, uses them to construct DAG reasoning traces with explicit evidence provenance, and trains a compact language model to generate these traces through gated cross-attention over sensor memory tokens. At inference, the adapted model jointly outputs the activity prediction and its reasoning trace, without requiring attribution computation or teacher guidance. We introduce Semantic Node Match(SNM), an LLM-as-judge metric that diagnoses reasoning fidelity at the observation, inference, and synthesis levels, localizing hallucinated observations and broken evidence chains missed by standard NLG metrics. Across seven wearable benchmarks, TRACE-TS achieves the best average accuracy and F1 among all evaluated methods (84.43%/81.24%), and outperforms the best LLM-based baseline by 17.96% in F1. Our code is available at https://github.com/SparshRastogi/TRACE-TS.",
+    "accessDate": "2026-11-12T01:44:01Z",
+    "archiveID": "arXiv:2608.00200",
+    "collections": [
+      "GJSU8GZQ"
+    ],
+    "creators": [
+      {
+        "creatorType": "author",
+        "firstName": "Sparsh",
+        "lastName": "Rastogi"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Tanmay",
+        "lastName": "Kumar"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Baiyu",
+        "lastName": "Chen"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Jatin",
+        "lastName": "Bedi"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Zechen",
+        "lastName": "Li"
+      },
+      {
+        "creatorType": "author",
+        "firstName": "Flora D.",
+        "lastName": "Salim"
+      }
+    ],
+    "date": "2026-07-31",
+    "dateAdded": "2026-11-12T01:44:01Z",
+    "dateModified": "2026-11-12T01:44:01Z",
+    "extra": "arXiv:2608.00200 [cs.AI]",
+    "itemType": "preprint",
+    "key": "EPQWN555",
+    "libraryCatalog": "arXiv.org",
+    "relations": {},
+    "repository": "arXiv",
+    "shortTitle": "TRACE-TS",
+    "tags": [
+      {
+        "tag": "Computer Science - Artificial Intelligence",
+        "type": 1
+      },
+      {
+        "tag": "Computer Science - Computation and Language",
+        "type": 1
+      },
+      {
+        "tag": "Computer Science - Emerging Technologies",
+        "type": 1
+      },
+      {
+        "tag": "Computer Science - Machine Learning",
+        "type": 1
+      }
+    ],
+    "title": "TRACE-TS: Attribution-Grounded and Traceable Sensor-Language Reasoning for Human Activity Understanding",
+    "url": "http://arxiv.org/abs/2608.00200"
+  }
+}

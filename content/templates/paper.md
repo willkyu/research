@@ -1,19 +1,19 @@
 ---
 title: "{{title}}"
 authors:
-  "{ authorsYaml }":
+  "{{ authorsYaml }}":
 description: ""
 type: paper
 citekey: ""
 year: "{{year}}"
 tags:
-  "{ tagsYaml }":
+  "{{ tagsYaml }}":
 source_url: ""
 status: unread
 date: "{{date:YYYY-MM-DD}}"
 draft: false
 citation-key:
-  "{ citationKeyYaml }":
+  "{{ citationKeyYaml }}":
 zotero-key: "{{itemKey}}"
 ---
 # {{title}}
