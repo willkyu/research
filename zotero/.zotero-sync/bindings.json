@@ -11,7 +11,20 @@
       "noteVersion": 0,
       "parentKey": "B8MHDLAM",
       "path": "content/papers/SensorLM Learning the Language of Wearable Sensors-GDWE58BQ.md",
-      "updated": "2026-11-05T04:15:31.208Z"
+      "updated": "2026-11-16T10:33:24.857Z"
+    },
+    {
+      "images": [],
+      "library": {
+        "type": "user"
+      },
+      "md5": "f27c32c8d7d88573eb63aa34f03b122a",
+      "noteKey": "NY8UY9DX",
+      "noteMd5": "7b3a1d66ddc195387ba356cc6e3726f6",
+      "noteVersion": 0,
+      "parentKey": "EPQWN555",
+      "path": "content/papers/TRACE-TS Attribution-Grounded and Traceable Sensor-Language Reasoning for Human Activity Understandi-NY8UY9DX.md",
+      "updated": "2026-11-16T10:33:24.860Z"
     }
   ],
   "generator": "zotero-quartz-workspace-sync",

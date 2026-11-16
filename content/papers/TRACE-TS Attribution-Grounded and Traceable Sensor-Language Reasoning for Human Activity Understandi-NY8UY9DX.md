@@ -27,9 +27,13 @@ $itemKey: NY8UY9DX
 
 ## 研究问题
 
-针对的大问题是HAR传统分类模型仅仅为了完成分类任务，而不考虑解释性。从而推出LLM导向的模型。随后指出当前这些模型的解释只是plausible，而不faithful。 1. Grounding limitation：没有具体到具体传感器数据（grounded in sensor evidence）；2. Reasoning limitation：解释并不可追踪（explanations should e traceable）；3. 指出评估应当可诊断（diagnostic），这主要是为了引出他提出的评价指标SNM。
+针对的大问题是HAR传统分类模型仅仅为了完成分类任务，而不考虑解释性。从而推出LLM导向的模型。随后指出当前这些模型的解释只是plausible，而不faithful。
 
-提到传统的HAR模型的label空间有限，但似乎没有怎么关注这个问题。应该只是引出LLM方法的背景。
+1. **Grounding limitation**：没有具体到具体传感器数据（grounded in sensor evidence）；
+2. **Reasoning limitation**：解释并不可追踪（explanations should be traceable）；
+3. 指出评估应当可诊断（**diagnostic**），这主要是为了引出他提出的评价指标SNM。
+
+> 提到传统的HAR模型的label空间有限，但似乎没有怎么关注这个问题。应该只是引出LLM方法的背景。
 
 ## 方法与主要贡献
 
@@ -37,17 +41,34 @@ $itemKey: NY8UY9DX
 
 这里DAG的层数是固定的，节点数与连接关系不是。也算是一种把归因展现出来的模板？
 
-## 数据与实验
+![[Pasted image 20261116183148.png]]
+### Stage 0
 
-数据来源、评价指标、比较基线与关键条件。
+> 论文中将其算在Stage1中
 
-## 关键结果与证据
+训练expert HAR模型（$C=\text{Attend-and-Discriminate}$），应当是正常训练的一个分类模型，论文没有给出明确设置。
 
-记录对应页码、章节、图表或公式编号。
+### Stage 1
+
+提取expert HAR模型训练正确的样本继续（错误的直接舍去），利用 **IG** 与**SHAP**归因，然后送入teacher LLM生成DAG，用于Stage 2的训练。这一阶段没有参数被训练
+
+### Stage 2
+
+原始sensor数据通过预训练时序小模型（MantisV2，冻结）后，通过projector（训练）映射到语言模型空间，作为Sensor Memory。将其插入语言模型（冻结）的每个decoder layer：
+
+$$
+H^{(l)}=H^{(l-1)}+\alpha_l\operatorname{CrossAttn}(Q,K,V)
+$$
+其中 $K$，$V$来自Sensor Memory，$Q$来自$H^{(l-1)}$.
+输出DAG后与Stage 1中的DAG计算loss。
 
 ## 局限与适用范围
 
-teacher的推理图的ground truth是LLM生成的，所以上限还是取决于LLM。是否只是学习了一个Attribution（由IG+SHAP组成）+被限定了推理方式为DAG的LLM呢？
+Stage1（即teacher那一条路）将expert HAR分类错误的舍弃了，那么应当也不会进入到Stage2的student的学习（但是原文似乎没有提到）。也就是说，模型完全只从分类正确的模型中学到了DAG，那么是否某些特定的模式就被忽视了呢？文章并没有指出丢弃了多少样本，以及丢弃了的样本的处理。
+
+teacher的推理图的ground truth是LLM生成的，所以上限还是取决于LLM。
+
+是否只是学习了在**特定样本上**的（expert HAR分类正确的），由**Attribution**（由IG+SHAP组成）+被**限定了推理方式为DAG的LLM**的知识？
 
 ## 与已有研究的关系
 

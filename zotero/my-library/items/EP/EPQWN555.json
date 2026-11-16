@@ -8,7 +8,7 @@
       "filename": "Rastogi 等 - 2026 - TRACE-TS Attribution-Grounded and Traceable Sensor-Language Reasoning for Human Activity Understand.pdf",
       "itemType": "attachment",
       "key": "H8HQLVL5",
-      "lastRead": 1794559249,
+      "lastRead": 1794824493,
       "linkMode": "imported_file",
       "parentItem": "EPQWN555",
       "relations": {},
@@ -17,10 +17,10 @@
     },
     {
       "dateAdded": "2026-11-13T08:56:41Z",
-      "dateModified": "2026-11-13T10:48:11Z",
+      "dateModified": "2026-11-16T10:33:15Z",
       "itemType": "note",
       "key": "NY8UY9DX",
-      "note": "<div data-schema-version=\"9\"></div>",
+      "note": "<div data-schema-version=\"9\"><h1>TRACE-TS: Attribution-Grounded and Traceable Sensor-Language Reasoning for Human Activity Understanding</h1>\n<h2>一句话概括</h2>\n<h2>研究问题</h2>\n<p>针对的大问题是HAR传统分类模型仅仅为了完成分类任务，而不考虑解释性。从而推出LLM导向的模型。随后指出当前这些模型的解释只是plausible，而不faithful。</p>\n<ol>\n<li><strong>Grounding limitation</strong><span>：没有具体到具体传感器数据（grounded in sensor evidence）；</span></li>\n<li><strong>Reasoning limitation</strong><span>：解释并不可追踪（explanations should be traceable）；</span></li>\n<li><span>指出评估应当可诊断（</span><strong>diagnostic</strong><span>），这主要是为了引出他提出的评价指标SNM。</span></li>\n</ol>\n<blockquote>\n<p>提到传统的HAR模型的label空间有限，但似乎没有怎么关注这个问题。应该只是引出LLM方法的背景。</p>\n</blockquote>\n<h2>方法与主要贡献</h2>\n<p>将传统流程从 【数据】-->【结果】变为【数据】-->【锚定的证据】-->【有向无环图（DAG）的推理】-->【结果】</p>\n<p>这里DAG的层数是固定的，节点数与连接关系不是。也算是一种把归因展现出来的模板？</p>\n<p><img src=\"Pasted%20image%2020261116183148.png\" alt=\"\"></p>\n<h3>Stage 0</h3>\n<blockquote>\n<p>论文中将其算在Stage1中</p>\n</blockquote>\n<p>训练expert HAR模型（<span class=\"math\">$C=\\text{Attend-and-Discriminate}$</span>），应当是正常训练的一个分类模型，论文没有给出明确设置。</p>\n<h3>Stage 1</h3>\n<p>提取expert HAR模型训练正确的样本继续（错误的直接舍去），利用 <strong>IG</strong> 与<strong>SHAP</strong>归因，然后送入teacher LLM生成DAG，用于Stage 2的训练。这一阶段没有参数被训练</p>\n<h3>Stage 2</h3>\n<p>原始sensor数据通过预训练时序小模型（MantisV2，冻结）后，通过projector（训练）映射到语言模型空间，作为Sensor Memory。将其插入语言模型（冻结）的每个decoder layer：</p>\n<pre class=\"math\">$$H^{(l)}=H^{(l-1)}+\\alpha_l\\operatorname{CrossAttn}(Q,K,V)$$</pre>\n<p>其中 <span class=\"math\">$K$</span>，<span class=\"math\">$V$</span>来自Sensor Memory，<span class=\"math\">$Q$</span>来自<span class=\"math\">$H^{(l-1)}$</span>.\n输出DAG后与Stage 1中的DAG计算loss。</p>\n<h2>局限与适用范围</h2>\n<p>Stage1（即teacher那一条路）将expert HAR分类错误的舍弃了，那么应当也不会进入到Stage2的student的学习（但是原文似乎没有提到）。也就是说，模型完全只从分类正确的模型中学到了DAG，那么是否某些特定的模式就被忽视了呢？文章并没有指出丢弃了多少样本，以及丢弃了的样本的处理。</p>\n<p>teacher的推理图的ground truth是LLM生成的，所以上限还是取决于LLM。</p>\n<p>是否只是学习了在<strong>特定样本上</strong>的（expert HAR分类正确的），由<strong>Attribution</strong>（由IG+SHAP组成）+被<strong>限定了推理方式为DAG的LLM</strong>的知识？</p>\n<h2>与已有研究的关系</h2>\n<ul>\n<li><span>相关论文：</span></li>\n<li><span>相关概念：</span></li>\n<li><span>相关研究方向：</span></li>\n</ul>\n<h2>我的判断与待核实问题</h2>\n<h2>下一步</h2>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled><span> </span><span>拓展相关知识点为概念</span></li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled><span> </span><span>补充论文与概念之间的双链</span></li>\n</ul></div>",
       "parentItem": "EPQWN555",
       "relations": {},
       "tags": []
@@ -102,7 +102,7 @@
     "notes": [
       {
         "key": "NY8UY9DX",
-        "title": "Note"
+        "title": "TRACE-TS: Attribution-Grounded and Traceable Sensor-Language Reasoning for Human Activity Understanding"
       }
     ],
     "title": "TRACE-TS: Attribution-Grounded and Traceable Sensor-Language Reasoning for Human Activity Understanding",
