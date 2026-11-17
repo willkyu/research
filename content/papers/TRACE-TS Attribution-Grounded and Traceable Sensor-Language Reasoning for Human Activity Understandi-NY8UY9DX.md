@@ -88,6 +88,7 @@ $$
 | SNM-OF1 | Observation 节点匹配  |
 | SNM-IF1 | Inference 节点匹配    |
 | SNM-SA  | Synthesis 整体语义一致性 |
+
  $$w(o_i^*,\hat o_j)= \begin{cases} \mathcal J\left( \phi(o_i^*),\phi(\hat o_j) \right), & \sigma(o_i^*)=\sigma(\hat o_j) \\[6pt] 0,&\text{otherwise} \end{cases}$$
 - $o_i^*$：Reference DAG 中的第 $i$ 个节点。
 - $\hat o_j$：Student DAG 中的第 $j$ 个节点。
