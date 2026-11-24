@@ -52,15 +52,21 @@ TRACE-TS 提出了一种归因引导的 Teacher–Student 框架，通过复杂�
 
 ### Stage 1
 
-提取expert HAR模型预测正确的样本继续（错误的直接舍去），利用 **IG** 与**SHAP**归因，然后送入teacher LLM（Qwen 3.5 122B-A10B，$冻结$）生成DAG，用于Stage 2的训练。这一阶段没有参数被训练
+提取expert HAR模型预测正确的样本继续（错误的直接舍去），利用 [[IG Integrated Gradients|IG]] 与[[SHAP SHapley Additive exPlanations|SHAP]]归因，然后送入teacher LLM（Qwen 3.5 122B-A10B，$冻结$）生成DAG，用于Stage 2的训练。这一阶段没有参数被训练
 
-$$X\rightarrow C(X)\rightarrow \begin{cases} IG(X,C)\\ SHAP(X,C) \end{cases}$$
+$$
+X\rightarrow C(X)\rightarrow \begin{cases} IG(X,C)\\ SHAP(X,C) \end{cases}
+$$
 
-$$A=\sqrt{\widetilde A^{IG}\cdot\widetilde A^{SHAP}}$$
+$$
+A=\sqrt{\widetilde A^{IG}\cdot\widetilde A^{SHAP}}
+$$
 
 然后：
 
-$$(A,\hat y,\text{Prompt}) \rightarrow Teacher\ LLM \rightarrow G_T$$
+$$
+(A,\hat y,\text{Prompt}) \rightarrow Teacher\ LLM \rightarrow G_T
+$$
 Teacher LLM的Prompt包括：
 - Predicted Activity；
 - Confidence；
@@ -89,7 +95,9 @@ $$
 | SNM-IF1 | Inference 节点匹配    |
 | SNM-SA  | Synthesis 整体语义一致性 |
 
- $$w(o_i^*,\hat o_j)= \begin{cases} \mathcal J\left( \phi(o_i^*),\phi(\hat o_j) \right), & \sigma(o_i^*)=\sigma(\hat o_j) \\[6pt] 0,&\text{otherwise} \end{cases}$$
+ $$
+ w(o_i^*,\hat o_j)= \begin{cases} \mathcal J\left( \phi(o_i^*),\phi(\hat o_j) \right), & \sigma(o_i^*)=\sigma(\hat o_j) \\[6pt] 0,&\text{otherwise} \end{cases}
+ $$
 - $o_i^*$：Reference DAG 中的第 $i$ 个节点。
 - $\hat o_j$：Student DAG 中的第 $j$ 个节点。
 - $w$：这两个节点之间的匹配权重。

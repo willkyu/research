@@ -1,6 +1,6 @@
 ---
 title: Contrastive Captioners (CoCa)
-description: 联合对比学习与自回归文本生成的图文多模态预训练架构
+description: 联合对比学习与自回归文本生成的图文多模态预训练架构。主要思想就是AB两种模态对比学习+文本模态A自回归生成描述。
 type: concept
 tags:
   - concept

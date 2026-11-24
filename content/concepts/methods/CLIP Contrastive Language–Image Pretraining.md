@@ -1,6 +1,6 @@
 ---
 title: Contrastive Language–Image Pretraining (CLIP)
-description: 通过图像编码器与文本编码器的对比学习，将两种模态映射到共享语义空间
+description: 通过图像编码器与文本编码器的对比学习，主要思想就是将两种不同模态映射到共享语义空间，正样本接近，负样本远离。
 type: concept
 tags:
   - concept

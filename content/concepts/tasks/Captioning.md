@@ -1,6 +1,6 @@
 ---
 title: Captioning
-description: 描述，根据输入内容生成简洁自然语言描述的条件文本生成任务
+description: 描述生成任务，根据输入内容生成简洁自然语言描述的文本
 type: concept
 tags:
   - concept
