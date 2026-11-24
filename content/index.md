@@ -10,7 +10,7 @@ draft: false
 ## 开始浏览
 
 - [[SensorLM Learning the Language of Wearable Sensors-GDWE58BQ|示例论文笔记]]
-- [[example-concept|示例概念]]
+- [[HAR Human Activity Recognition|示例概念]]
 
 ## 其他入口
 

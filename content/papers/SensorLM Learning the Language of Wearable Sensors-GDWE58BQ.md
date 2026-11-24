@@ -53,7 +53,7 @@ $itemKey: P7XGL47Y
 
 1. 该工作提出了一个自动文本描述生成方法管线来处理传感器数据，生成Statistical、Structural、Semantic 三个层次。
 2. 用1的管线构建了大型数据集：包含 103,643 人、2,489,570 person-days、约 59.7 million hours。
-3. 在该数据集基础上，提出了统一的多模态预训练框架，将 CLIP、Captioning 和 CoCa 等范式整合到同一架构中。
+3. 在该数据集基础上，提出了统一的多模态预训练框架，将 [[CLIP Contrastive Language–Image Pretraining|CLIP]]、[[Captioning]] 和 [[CoCa Contrastive Captioners|CoCa]] 等范式整合到同一架构中。
 ## 方法
 
 ### 自动文本描述生成方法管线
@@ -88,7 +88,7 @@ $itemKey: P7XGL47Y
 
 ![[Pasted image 20261117141516.png]]
 
-采用CoCa，结合CLIP与Captioning。同时进行对比学习与生成学习。主要包含三个模块：Sensor Encoder；Text Encoder；Multimodal Text Decoder
+采用 [[CoCa Contrastive Captioners|CoCa]]，结合 [[CLIP Contrastive Language–Image Pretraining|CLIP]] 与 [[Captioning]] 。同时进行对比学习与生成学习。主要包含三个模块：Sensor Encoder；Text Encoder；Multimodal Text Decoder
 
 captionning loss的Ground-truth Caption就是sensor-text pair中的text。
 
